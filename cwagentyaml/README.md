@@ -1,10 +1,10 @@
 Step 1: Create a Namespace for CloudWatch
 
-# kubectl apply -f cloudwatch-namespace.yaml
+**kubectl apply -f cloudwatch-namespace.yaml**
 
 Step 2: Create a Service Account in the Cluster
 
-# kubectl apply -f cwagent-serviceaccount.yaml
+**kubectl apply -f cwagent-serviceaccount.yaml**
 
 Step 3: Create a ConfigMap for the CloudWatch Agent
 
@@ -14,7 +14,7 @@ cluster_name – In the kubernetes section, replace {{cluster-name}} with the na
 
 Step 4: Deploy the CloudWatch Agent as a DaemonSet
 
-# kubectl apply -f cwagent-daemonset.yaml
+**kubectl apply -f cwagent-daemonset.yaml**
 
 Step 5: Install FluentD
 
@@ -28,7 +28,7 @@ Step 5: Install FluentD
 
 >> Deploy the FluentD DaemonSet to the cluster by running the following command.
 
-# kubectl apply -f fluentd.yaml
+**kubectl apply -f fluentd.yaml**
 
 
 >> Validate the deployment by running the following command. Each node should have one pod named fluentd-cloudwatch-*.
